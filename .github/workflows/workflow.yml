@@ -35,7 +35,7 @@ jobs:
     rollback:
         runs-on: ubuntu-latest
         needs: build
-        if: ${{ needs.build.outputs.build_status == 'SI' }}
+        if: ${{ needs.build.outputs.build_status == 'NO' }}
         steps:
             - name: Rollback
               run: |
